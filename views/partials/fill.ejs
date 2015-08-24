@@ -1,0 +1,19 @@
+<section class="panel panel-default panel-heading">
+  <div class="panel-heading form-group">
+    <h2 class="panel-title ">一、&nbsp&nbsp&nbsp&nbsp&nbsp填空题</h2>
+  </div>
+  <ol class="" id='fill'>
+    <div class="form-group">
+      <%for(var i = 0; i < topics.fillBlack.length;i++) {%>
+
+        <li>
+        <label for="answer1"><%=topics.fillBlack[i].title%></label>
+          <%for(var x = 0; x < topics.fillBlack[i].answer.length;x++){%>
+            <input type="text" id='answer1' class="form-control" name="f<%= i+1 %>"
+            value=<%=typeof(topics.fillBlack[i].input)=="string"? topics.fillBlack[i].input:topics.fillBlack[i].input[x]%>>
+          <%}%>
+    </li>
+  <%}%>
+</div>
+</ol>
+</section>

@@ -1,0 +1,27 @@
+<section class="panel panel-default panel-heading">
+  <div class="panel-heading form-group">
+    <h2 class="panel-title">二、&nbsp&nbsp&nbsp&nbsp&nbsp选择题</h2>
+  </div>
+  <div class="panel-body">
+    <div class="form-group">
+    <ol id='fill' class="">
+      <%for(var i = 0; i < topics.choiceS.length; i++) {%>
+        <li>
+          <ul class="list-unstyled">
+        <label for="answer1"><%=topics.choiceS[i].title%></label>
+        <%for(var x in topics.choiceS[i].options){%>
+          <li>
+          <% var checkIt = x=== topics.choiceS[i].input? "checked":"" %>
+          <label>
+            <input type="radio" id='chose1A' value=<%= x %> name="sc<%= i+1 %>" <%= checkIt%>>
+            (<%= x %>)<%=topics.choiceS[i].options[x]%></label>
+      </li>
+        <%}%>
+        </ul>
+        </li>
+      <%}%>
+      </ol>
+    </div>
+  </div>
+
+  </section>

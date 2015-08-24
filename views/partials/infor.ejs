@@ -1,0 +1,30 @@
+<div class="text-justify container">
+  <form role="form" id='fm' action="/" method="post" class="form-inline">
+    <h1 class="text-center form-group text-primary">统一建模语言言论考试</h1>
+    <header class="panel panel-default panel-heading ">
+      <ul id='information' class='list-unstyled'>
+        <li class="form-group list-group-item">
+          <label>考试科目：
+            <input type="text" class="form-control" id='score' value='统一建模语言'>
+          </label>
+          <label>时间：
+            <label>
+              <input type="text" class="form-control"  value='100分钟'>
+            </label>
+            <label>得分：
+              <input type="text" class="form-control" id='score' name='score' value=<%= scorea%> >
+            </label>
+        </li>
+        <li class="form-group  list-group-item">
+          <label>班&nbsp&nbsp&nbsp&nbsp&nbsp级：
+            <input type="text" name='sclass' class="form-control" placeholder="请输入班级" id='sclass' value=<%='page.classa'%>>
+          </label>
+          <label>学号：
+            <input type="text" name='sid' class="form-control" placeholder="请输入学号" id='sid'>
+          </label>
+          <label>姓名：
+            <input type="text" name='sname' class="form-control" placeholder="请输入姓名" id='sname'>
+          </label>
+        </li>
+      </ul>
+    </header>

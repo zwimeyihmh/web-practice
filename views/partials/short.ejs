@@ -1,0 +1,23 @@
+<section class="panel panel-default panel-heading">
+  <div class="panel-heading form-group">
+    <h2 class="form-group panel-title">五、&nbsp&nbsp&nbsp&nbsp&nbsp简答题</h2>
+  </div>
+  <div class="panel-body">
+
+  <ol id='fill' class="">
+    <%for(var i = 0; i < topics.shortA.length;i++) {%>
+  <div class="form-group ">
+    <li>
+      <label for="answer1"><%=topics.shortA[i].title%></label>
+</li>
+</div>
+</ol>
+      <%for(var x = 0; x < topics.shortA[i].answer.length;x++){%>
+<textarea id='' name="s<%= i+1 %>" class="form-control" rows="8" cols="40" ><%=topics.shortA[i].input%></textarea>
+<%}%>
+
+<%}%>
+
+</div>
+
+</section>

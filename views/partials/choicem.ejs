@@ -1,0 +1,26 @@
+<section class="panel panel-default panel-heading">
+  <div class="panel-heading form-group">
+    <h2 class="panel-title">三、&nbsp&nbsp&nbsp&nbsp&nbsp多选题</h2>
+  </div>
+  <div class="panel-body">
+
+  <div class="form-group">
+  <ol id='fill' class="">
+    <%for(var i = 0; i < topics.choiceM.length; i++) {%>
+      <li>
+        <ul class="list-unstyled">
+      <label for="answer1"><%=topics.choiceM[i].title%></label>
+      <%for(var x in topics.choiceM[i].options) {%>
+        <li>
+        <% var checkIt = topics.choiceM[i].input.indexOf(x)!==-1? "checked":"" ; %>
+        <label>
+          <input type="checkbox" id='chose1A' value=<%= x %> name="mc<%= i+1 %>" <%=checkIt%>>(<%= x %>)<%=topics.choiceM[i].options[x]%></label>
+      </li>
+      <%}%>
+      </ul>
+      </li>
+    <%}%>
+    </ol>
+  </div>
+</div>
+</section>

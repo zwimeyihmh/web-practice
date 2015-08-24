@@ -1,0 +1,25 @@
+
+      <section class="panel panel-default panel-heading">
+        <div class="panel-heading form-group">
+          <h2 class="form-group panel-title">四、&nbsp&nbsp&nbsp&nbsp&nbsp判断题</h2>
+        </div>
+        <div class="panel-body">
+
+        <ol id='fill' class="">
+          <div class="form-group">
+            <%for(var i = 0; i < topics.judgeA.length; i++) {%>
+              <li>
+              <label for="answer1"><%=topics.judgeA[i].title%>【</label>
+              <%for(var x in topics.judgeA[i].options){%>
+              <% var checkIt = x===topics.judgeA[i].input? "checked":"" ; %>
+                <label>
+                  <input type="radio"  id='chose1A' value=<%= x %> name="j<%= i+1 %>" <%=checkIt%>><%=topics.judgeA[i].options[x]%></label>
+              <%}%>
+              】
+            </li>
+            <%}%>
+          </div>
+        </ol>
+        </div>
+
+      </section>
